@@ -26,7 +26,7 @@ frame_principal.place(x=10, y=10)
 label_titulo = tk.Label(frame_principal, width=20, height=1, bg='#FFC3A0', fg='#6D214F', font=("Arial Black", 28), text="Analizador Léxico")
 label_titulo.place(x=80, y=1)
 
-label_entrada = tk.Label(frame_principal, width=20, height=2, text="Cadena a analizar", bg='#FFC3A0', fg='#6D214F')  # Colores pastel
+label_entrada = tk.Label(frame_principal, width=20, height=2, text="Cadena a analizar", font=("Arial",12),bg='#FFC3A0', fg='#6D214F')  # Colores pastel
 label_entrada.grid(sticky="w")
 label_entrada.place(x=20, y=70)
 
@@ -39,7 +39,7 @@ entrada_texto.config(yscrollcommand=scroll_entrada.set)
 
 label_resultado = tk.Label(frame_principal, width=10, height=1, text="Resultado: ", font=("Arial", 12), bg='#FFC3A0', fg='#6D214F')  # Colores pastel
 label_resultado.grid(sticky="e")
-label_resultado.place(x=20, y=270)
+label_resultado.place(x=100, y=270)
 
 resultados_texto = Text(frame_principal, width=56, height=9, font=("Arial", 12))
 resultados_texto.place(x=20, y=300)

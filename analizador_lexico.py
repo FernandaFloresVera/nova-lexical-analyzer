@@ -5,11 +5,11 @@ from tkinter import *
 palabra_reservada = {
     'fn': 'palabra_reservada',
     'cycle': 'palabra_reservada',
-    'screen': 'palabra_res',
-    'show': 'palabra_res',
-    'when': 'palabra_res',
-    'so': 'palabra_res',
-    'run': 'palabra_res',
+    'screen': 'palabra_reservada',
+    'show': 'palabra_reservada',
+    'when': 'palabra_reservada',
+    'so': 'palabra_reservada',
+    'run': 'palabra_reservada',
     'int': 'tipo',
     'string' : 'tipo',
 }
@@ -30,11 +30,7 @@ tokens = list(palabra_reservada.values()) + [
     'parentesis_a',
     'parentesis_c',
     'llave_a',
-    'llave_c',
-    'fn',
-    'cycle',
-    'run',
-    'simbolo'
+    'llave_c'
 ]
 
 # Expresiones regulares para operadores y signos
@@ -51,7 +47,8 @@ t_parentesis_a = r'\('
 t_parentesis_c = r'\)'
 t_llave_a = r'\{'
 t_llave_c = r'\}'
-t_cadena = r'"[^"]*"'
+t_cadena = r'["“”][^"“”]*["“”]'
+
 
 def t_variable(t):
     r'_[a-zA-Z_][a-zA-Z0-9]*'
